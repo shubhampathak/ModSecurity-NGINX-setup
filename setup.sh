@@ -47,7 +47,7 @@ else
     git clone --depth 1 https://github.com/SpiderLabs/ModSecurity-nginx.git
     
     #Filter nginx version number only
-    nginxvnumber=$(nginx -v 2>&1 | grep -o '[0-9.]*$')
+    nginxvnumber=$(nginx -v 2>&1 | grep -o '[0-9.]*')
     echo -e "${c} Current version of nginx is: " $nginxvnumber; $r
     wget http://nginx.org/download/nginx-"$nginxvnumber".tar.gz
     tar zxvf nginx-"$nginxvnumber".tar.gz
